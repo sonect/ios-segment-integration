@@ -2,8 +2,9 @@
 
 #import <Foundation/Foundation.h>
 
+@class UAConfig;
 @interface SEGUrbanAirshipAutopilot : NSObject
 
-+(void)takeOff:(NSDictionary *)settings storeConfig:(BOOL)storeConfig;
++(void)takeOff:(UAConfig *)config settings:(NSDictionary *)settings storeConfig:(BOOL)storeConfig;
 
 @end

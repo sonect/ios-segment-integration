@@ -18,8 +18,7 @@ NSString *const SEGUrbanAirshipAutopilotAppSecret = @"appSecret";
                  object:nil];
 }
 
-+(void)takeOff:(NSDictionary *)settings storeConfig:(BOOL)storeConfig {
-    UAConfig *config = [UAConfig defaultConfig];
++(void)takeOff:(UAConfig *)config settings:(NSDictionary *)settings storeConfig:(BOOL)storeConfig {
     config.productionAppKey = settings[SEGUrbanAirshipAutopilotAppKey];
     config.productionAppSecret = settings[SEGUrbanAirshipAutopilotAppSecret];
 

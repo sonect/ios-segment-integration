@@ -13,10 +13,11 @@
  */
 @implementation SEGUrbanAirshipIntegration
 
-- (instancetype)initWithSettings:(NSDictionary *)settings {
+- (instancetype)initWithConfig:(UAConfig *)config settings:(NSDictionary *)settings{
     if (self = [super init]) {
         self.settings = settings;
-        [SEGUrbanAirshipAutopilot takeOff:settings storeConfig:YES];
+        self.config = config;
+        [SEGUrbanAirshipAutopilot takeOff:config settings:settings storeConfig:YES];
     }
 
     return self;
